@@ -185,7 +185,7 @@ Before beginning the installation and configuration of LDAP on both the server a
    - **CentOS 7 or CentOS 9** is recommended for both the server and client.
    - Ensure the system is updated to the latest packages:
      ```bash
-     # yum update -y
+       yum update -y
      ```
 
 2. **Network Configuration:**
@@ -200,21 +200,21 @@ Before beginning the installation and configuration of LDAP on both the server a
      - **LDAPS (636/tcp)**, if using SSL/TLS
    - Configure firewall as needed (on both server and client):
      ```bash
-     # firewall-cmd --zone=public --add-service=ldap --permanent
-     # firewall-cmd --reload
+       firewall-cmd --zone=public --add-service=ldap --permanent
+       firewall-cmd --reload
      ```
 
 4. **SELinux Configuration:**
    - **Disable SELinux** temporarily or configure it to allow LDAP traffic:
      ```bash
-     # setenforce 0   # Disable SELinux temporarily (useful during setup)
+       setenforce 0   # Disable SELinux temporarily (useful during setup)
      ```
    - Alternatively, adjust SELinux policies to allow LDAP services to run without disabling SELinux entirely.
 
 5. **Dependencies & Tools:**
    - Make sure the system has the necessary tools to configure and manage OpenLDAP:
      ```bash
-     # yum install -y openldap openldap-servers openldap-clients openldap-devel migrationtools
+       yum install -y openldap openldap-servers openldap-clients openldap-devel migrationtools
      ```
 
 6. **System Resources:**
