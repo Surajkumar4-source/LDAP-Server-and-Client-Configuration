@@ -1,6 +1,5 @@
 # LDAP-Server-and-Client-Configuration
 
-
 <br>
 
 
